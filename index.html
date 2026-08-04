@@ -17,9 +17,9 @@
                         "surface-container": "#f7f9f2",
                         "deep-forest": "#3E4431",
                         "surface-variant": "#e6eed5",
-                        "primary": "#769826", /* Warna hijau gelap dari palet */
+                        "primary": "#769826", 
                         "on-secondary-container": "#7b4d51",
-                        "primary-fixed": "#A1CB35", /* Warna hijau terang dari palet */
+                        "primary-fixed": "#A1CB35", 
                         "tertiary-fixed-dim": "#ddbed3",
                         "linen-white": "#F9F8F3",
                         "inverse-primary": "#A1CB35",
@@ -27,7 +27,7 @@
                         "tertiary-fixed": "#fad9ef",
                         "on-tertiary": "#ffffff",
                         "outline": "#769826",
-                        "tertiary": "#FFDE4E", /* Warna kuning dari palet */
+                        "tertiary": "#FFDE4E", 
                         "surface-dim": "#dedacc",
                         "secondary": "#A1CB35",
                         "secondary-container": "#ffc2c6",
@@ -56,7 +56,7 @@
                         "on-primary-fixed": "#171e07",
                         "on-secondary": "#ffffff",
                         "secondary-fixed": "#ffdadb",
-                        "heritage-gold": "#FF9D4D", /* Warna oranye dari palet untuk aksen estetik */
+                        "heritage-gold": "#FF9D4D", 
                         "outline-variant": "#c7c7bc",
                         "primary-fixed-dim": "#A1CB35",
                         "on-tertiary-fixed-variant": "#574051",
@@ -98,12 +98,11 @@
         .fill-icon { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         
         .cream-space { margin-left: auto; margin-right: auto; max-width: 800px; padding-left: 24px; padding-right: 24px; }
-        /* Transparansi card disesuaikan agar warna hijau alam tetap terlihat tembus pandang */
         .glass-card { background: rgba(252, 253, 250, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(118, 152, 38, 0.3); }
         
         .bg-botanical {
-            /* GANTI URL DI BAWAH INI DENGAN LINK GAMBAR ALAM GENERATE ANDA YANG SUDAH DIUPLOAD (misal ke Postimages/Drive) */
-            background-image: url('URL_GAMBAR_NATURE_BARU_ANDA.png');
+            /* Background Latar Utama */
+            background-image: url('https://drive.google.com/uc?id=1JiBceIihpt6zOm5Jeeh4zEjB3O5uHJ7H');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -112,7 +111,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            opacity: 0.35; /* Ditingkatkan sedikit agar keindahan alamnya lebih menonjol */
+            opacity: 0.35; 
             z-index: -1;
             pointer-events: none;
         }
@@ -140,7 +139,7 @@
             object-fit: cover;
             object-position: center;
             opacity: 0.95;
-            mix-blend-mode: normal; /* Diubah ke normal agar warna asli gambar AI tidak rusak */
+            mix-blend-mode: normal; 
         }
         .gate-left img { left: 0; }
         .gate-right img { right: 0; }
@@ -202,13 +201,13 @@
 <!-- Split Cover Section (Gate) -->
 <div id="cover-section" style="visibility:hidden;">
 <div class="gate-half gate-left">
-<!-- GANTI URL DI BAWAH INI JUGA DENGAN GAMBAR ALAM GENERATE ANDA -->
-<img alt="Nature background left" src="URL_GAMBAR_NATURE_BARU_ANDA.png"/>
+<!-- Gambar Cover Kiri -->
+<img alt="Nature background left" src="https://drive.google.com/uc?id=1JiBceIihpt6zOm5Jeeh4zEjB3O5uHJ7H"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20"></div>
 </div>
 <div class="gate-half gate-right">
-<!-- GANTI URL DI BAWAH INI JUGA DENGAN GAMBAR ALAM GENERATE ANDA -->
-<img alt="Nature background right" src="URL_GAMBAR_NATURE_BARU_ANDA.png"/>
+<!-- Gambar Cover Kanan -->
+<img alt="Nature background right" src="https://drive.google.com/uc?id=1JiBceIihpt6zOm5Jeeh4zEjB3O5uHJ7H"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20"></div>
 </div>
 <div class="text-center w-full px-gutter" id="cover-content">
