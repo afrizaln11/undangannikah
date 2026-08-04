@@ -63,6 +63,14 @@
   }
   #openBtn:hover{ background:var(--gold); color:var(--dark-green); }
 
+  /* ---- TOP NAV ---- */
+  .top-nav{
+    display:flex; justify-content:center; gap:32px; background:var(--dark-green);
+    padding:16px 0; position:sticky; top:0; z-index:40; font-size:.72rem; letter-spacing:.12em;
+  }
+  .top-nav a{ color:var(--ivory); text-decoration:none; text-transform:uppercase; opacity:.85; transition:.2s; }
+  .top-nav a:hover{ opacity:1; color:var(--gold); }
+
   /* ---- HERO ---- */
   #home{
     min-height:80vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -181,6 +189,14 @@
   <div class="guest-name" id="guestNameCover">Bapak/Ibu/Saudara/i</div>
   <button id="openBtn">Open Invitation</button>
 </div>
+
+<nav class="top-nav">
+  <a href="#home">Home</a>
+  <a href="#couple">Couple</a>
+  <a href="#venue">Venue</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#rsvp">RSVP</a>
+</nav>
 
 <section id="home">
   <div class="eyebrow">The Wedding Of</div>
