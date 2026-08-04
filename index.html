@@ -7,62 +7,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
+        // PALET WARNA LAMA (COLOR HUNT) TETAP DIPERTAHANKAN
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "on-tertiary-container": "#fffbff",
-                        "dusty-rose-light": "#FFDE4E",
-                        "surface-container": "#f7f9f2",
-                        "deep-forest": "#3E4431",
-                        "surface-variant": "#e6eed5",
                         "primary": "#769826", 
-                        "on-secondary-container": "#7b4d51",
                         "primary-fixed": "#A1CB35", 
-                        "tertiary-fixed-dim": "#ddbed3",
-                        "linen-white": "#F9F8F3",
-                        "inverse-primary": "#A1CB35",
-                        "surface-container-highest": "#e6eed5",
-                        "tertiary-fixed": "#fad9ef",
-                        "on-tertiary": "#ffffff",
-                        "outline": "#769826",
                         "tertiary": "#FFDE4E", 
-                        "surface-dim": "#dedacc",
-                        "secondary": "#A1CB35",
-                        "secondary-container": "#ffc2c6",
-                        "error-container": "#ffdad6",
-                        "tertiary-container": "#876d80",
-                        "on-error": "#ffffff",
-                        "on-surface-variant": "#46483f",
-                        "inverse-surface": "#323127",
-                        "secondary-fixed-dim": "#f3b7bb",
-                        "on-primary": "#ffffff",
-                        "surface-container-low": "#fbfcf8",
-                        "on-background": "#1d1c13",
-                        "on-secondary-fixed-variant": "#653b3f",
-                        "on-tertiary-fixed": "#281525",
-                        "error": "#ba1a1a",
-                        "on-surface": "#1d1c13",
-                        "on-secondary-fixed": "#321115",
-                        "surface": "#fcfdfa",
-                        "on-primary-fixed-variant": "#424a2f",
-                        "on-error-container": "#93000a",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-bright": "#fcfdfa",
-                        "surface-tint": "#769826",
-                        "inverse-on-surface": "#f5f1e2",
-                        "background": "#fcfdfa",
-                        "on-primary-fixed": "#171e07",
-                        "on-secondary": "#ffffff",
-                        "secondary-fixed": "#ffdadb",
                         "heritage-gold": "#FF9D4D", 
+                        "on-primary": "#ffffff",
+                        "surface": "#fcfdfa",
+                        "surface-container": "#f7f9f2",
+                        "surface-container-highest": "#e6eed5",
+                        "surface-variant": "#e6eed5",
+                        "background": "#fcfdfa",
+                        "on-background": "#1d1c13",
+                        "on-surface": "#1d1c13",
+                        "on-surface-variant": "#46483f",
                         "outline-variant": "#c7c7bc",
-                        "primary-fixed-dim": "#A1CB35",
-                        "on-tertiary-fixed-variant": "#574051",
+                        "surface-tint": "#769826",
+                        // Warna pendukung
                         "primary-container": "#e6eed5",
                         "on-primary-container": "#1d2b05",
-                        "surface-container-high": "#f0f4e6"
+                        "surface-container-low": "#fbfcf8",
+                        "surface-container-lowest": "#ffffff"
                     },
                     borderRadius: {
                         DEFAULT: "0.25rem",
@@ -81,12 +51,12 @@
                     },
                     fontFamily: {
                         "section-title": ["Playfair Display", "serif"],
-                        "headline-lg-mobile": ["Playfair Display", "serif"],
-                        "label-caps": ["Manrope", "sans-serif"],
                         "display-hero": ["Playfair Display", "serif"],
-                        "body-sm": ["Source Sans 3", "sans-serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "headline-lg": ["Playfair Display", "serif"],
                         "body-md": ["Source Sans 3", "sans-serif"],
-                        "headline-lg": ["Playfair Display", "serif"]
+                        "label-caps": ["Manrope", "sans-serif"],
+                        "body-sm": ["Source Sans 3", "sans-serif"]
                     }
                 }
             }
@@ -100,9 +70,9 @@
         .cream-space { margin-left: auto; margin-right: auto; max-width: 800px; padding-left: 24px; padding-right: 24px; }
         .glass-card { background: rgba(252, 253, 250, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(118, 152, 38, 0.3); }
         
+        /* BACKGROUND BARU DARI DESIGN ANDA */
         .bg-botanical {
-            /* Memanggil gambar dari folder Github Anda */
-            background-image: url('bg-alam.jpg');
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8XY3v9h8xbbe7I8-M__01Drmeje3uBKUsyXWEnZE7o5VJ_tWy9lZsWyB8k9DabZN7BmCcy1_jChUO1yjVuSwumD4bCxkDqdZynqzluEFVRCYgaanKWZ08CawGpEXwmBgqn0e4NMdLpQ1G6xtH3ImMnYcUAYFJnZz9-gkrMk-X1Pg8oGXSz4aYCUcbxb78Stdkhb6j85Wocv8bEoWXJsvgrtkjJU726vOfSTI6845pNAZ8D83Ozjc-9xgRHAkdTLof6g');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -111,10 +81,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            opacity: 0.35; 
+            opacity: 0.15;
             z-index: -1;
             pointer-events: none;
         }
+        
+        .leaf-ornament { position: absolute; width: 150px; opacity: 0.15; pointer-events: none; }
 
         /* Split Transition Styles */
         #cover-section {
@@ -125,22 +97,25 @@
             transition: visibility 1s;
         }
         .gate-half {
-            position: relative;
+            position: absolute;
+            top: 0;
             width: 50%;
             height: 100%;
             overflow: hidden;
             transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease-in-out;
-            /* DITAMBAHKAN: Warna putih pekat agar tulisan belakang tidak bocor jika gambar gagal dimuat */
-            background-color: #f7f9f2; 
+            background-color: theme("colors.surface-container");
         }
+        .gate-left { left: 0; }
+        .gate-right { right: 0; }
         .gate-half img {
             position: absolute;
-            width: 200%;
-            height: 100%;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            max-width: none;
             object-fit: cover;
             object-position: center;
-            opacity: 0.95;
-            mix-blend-mode: normal; 
+            opacity: 0.9;
         }
         .gate-left img { left: 0; }
         .gate-right img { right: 0; }
@@ -173,7 +148,7 @@
             transform: translateY(0);
         }
         
-        /* Loading & Music styles */
+        /* SISTEM LAMA: Loading & Music styles */
         #loadingScreen{
             position:fixed; inset:0; z-index:999; background:theme("colors.surface-container");
             display:flex; align-items:center; justify-content:center;
@@ -194,22 +169,20 @@
 </head>
 <body class="bg-background text-on-background font-body-md min-h-screen relative pb-24 md:pb-0">
 
+<!-- SISTEM: Audio & Loading -->
 <audio id="bgMusic" loop preload="auto"></audio>
 <button id="musicToggle" onclick="toggleMusic()" style="display:none;">🎵</button>
-
 <div id="loadingScreen">Memuat undangan...</div>
 
 <!-- Split Cover Section (Gate) -->
-<div id="cover-section" style="visibility:hidden;">
+<div id="cover-section">
 <div class="gate-half gate-left">
-<!-- Mengambil gambar dari folder GitHub Anda -->
-<img alt="" src="bg-alam.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20"></div>
+<img alt="Botanical heritage background left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjrirHNCdqY2GIszudAKpeYcH8lzNj4w4WTOeeT1n72hjSeUxU5datVCCc8DE0FSVl6P7VoiyE9e9TBBfmYnlEWLDzrUfk_PiLbh0EpuEaTwB19gz5uK1Rrn3dUz1wl64wn4WmdU4YLn5dgW1nrIWEJyStXILqSHAdpMhzHuj9uzrSgVzTEO_-kPRhvwhExNlAj6P2-wLutuIy7H-xs4gMxyX0Vqc0jQ3hKYYdZsBxu2rlkXCHLJPclQI6G_C1QZozBg"/>
+<div class="absolute top-0 left-0 w-[100vw] h-[100vh] bg-gradient-to-t from-background/90 via-background/40 to-background/20 pointer-events-none"></div>
 </div>
 <div class="gate-half gate-right">
-<!-- Mengambil gambar dari folder GitHub Anda -->
-<img alt="" src="bg-alam.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20"></div>
+<img alt="Botanical heritage background right" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBphvmB26Q3GM7cgmOuHqEXfwOJE0TIjFrRPhgGWDb4A727NXYAzoDXS4sBbXWKdCRMSwdEgMvT6XQ8Y6d1UgD2U6Li5UTYBFNJHnNfzLjduYXWlfyGnLnM4KV_vEnRSm9n9wvTDxVL9haO0E-qG4_NByUTsfRFOeZL7T_2hw4rtoCCdaqYzWb0Mgy-gvqo0uxFA5Ms8JbUf0TkjuJmKeUsV_2YX4-lKOFoUkXUjPgVnIlzlehl7-E2UBc0nXY_Cwk12Q"/>
+<div class="absolute top-0 right-0 w-[100vw] h-[100vh] bg-gradient-to-t from-background/90 via-background/40 to-background/20 pointer-events-none"></div>
 </div>
 <div class="text-center w-full px-gutter" id="cover-content">
 <div class="flex flex-col items-center w-full max-w-md mx-auto px-gutter py-12 bg-surface/60 backdrop-blur-md border border-outline-variant/40 rounded-3xl m-gutter shadow-xl">
@@ -241,22 +214,40 @@
 </div>
 </div>
 </div>
+
 <!-- Main Site Content (Hidden until opened) -->
 <div class="bg-botanical"></div>
-<main class="flex-grow">
+
+<!-- TopAppBar (Desktop) -->
+<header class="hidden md:flex justify-between items-center w-full px-gutter py-4 bg-surface/80 backdrop-blur-md border-b border-outline-variant docked full-width top-0 sticky z-50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">park</span>
+<span class="font-display-hero text-headline-lg text-primary" id="headerNames">Putri &amp; Janet</span>
+</div>
+<nav class="flex gap-8">
+<a class="font-section-title text-section-title text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-section-title text-section-title text-on-surface-variant hover:text-primary transition-colors" href="#couple">Couple</a>
+<a class="font-section-title text-section-title text-on-surface-variant hover:text-primary transition-colors" href="#event">Event</a>
+<a class="font-section-title text-section-title text-on-surface-variant hover:text-primary transition-colors" href="#rsvp">RSVP</a>
+</nav>
+</header>
+
+<main class="flex-grow pt-section-gap-mobile md:pt-section-gap-desktop">
 <!-- Couple Section -->
-<section class="w-full max-w-container-max mx-auto px-gutter pt-section-gap-mobile md:pt-section-gap-desktop pb-section-gap-mobile md:pb-section-gap-desktop flex flex-col gap-section-gap-mobile md:gap-section-gap-desktop items-center reveal" id="couple">
+<section class="w-full max-w-container-max mx-auto px-gutter pb-section-gap-mobile md:pb-section-gap-desktop flex flex-col gap-section-gap-mobile md:gap-section-gap-desktop items-center reveal" id="couple">
 <!-- Quranic Verse -->
 <div class="text-center max-w-2xl mx-auto flex flex-col items-center gap-stack-md relative">
-<span class="material-symbols-outlined text-heritage-gold text-5xl mb-4 drop-shadow-md">auto_awesome</span>
-<p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed font-medium">
+<img class="leaf-ornament -top-10 -left-10 transform -rotate-45 hidden md:block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY8xCfiZsCzbymxI9GqNsw0xpn_t4ZcLiMcC_7AxG5AUF56SeJKvuxak9v4mATAHkOZ2zP9GYJLFDduvQJzcXe7127HTvExqygLd7_p6vombDyTIQQ-TXIWd3B2UOmCzGmxaCkTqmI6pCk0tOk_1b76H2NYStw3Xuzba-Dq8QBAA8cfQ7LPJvPJKm9_vgPclfjo7Hk2wQsPovTb3ALEAnwKyV4-wD4OH9uRL-KLznZ9xYGWBUslq_2"/>
+<span class="material-symbols-outlined text-heritage-gold text-4xl mb-4">auto_awesome</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
                     "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
                 </p>
 <p class="font-label-caps text-label-caps text-primary tracking-widest mt-2">
                     Q.S. Ar-Rum : 21
                 </p>
+<img class="leaf-ornament -bottom-10 -right-10 transform rotate-135 hidden md:block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHNpHALl0XPENNLb2YzWGxvTMEBoWhSwGLadN6pVrR-Apsl1Uc763-WCKNvqDoGpPVZPXKyhBV4eesX1cQ6XbUR445hslQqpGxfrt_d89KzQA1v0H_TSeSYnggLglXzhzNvXP_CmEX7NtJQGZ1B6zpjxHcdFC8F6P7A1nSZLJ_9LztcjFNRokivGEOSAmAMYn-pTzY7inDTKSePRedb23EHrRUfWj23TidJHmqBU3Y4gRYyBm1qUi4"/>
 </div>
-<!-- Couple Profile -->
+<!-- Couple Profile (Bento Layout Baru) -->
 <div class="flex flex-col items-center w-full relative z-10 reveal">
 <div class="text-center mb-stack-lg">
 <h2 class="font-section-title text-section-title text-primary uppercase tracking-[0.2em] mb-2">Bride &amp; Groom</h2>
@@ -267,35 +258,31 @@
 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full max-w-5xl mx-auto">
 <div class="md:col-span-3 text-center md:text-right flex flex-col items-center md:items-end gap-stack-sm order-2 md:order-1">
 <h3 class="font-headline-lg-mobile md:font-headline-lg text-primary" id="brideName">—</h3>
-<div class="h-[2px] w-16 bg-heritage-gold my-2"></div>
+<div class="h-[1px] w-12 bg-heritage-gold my-2"></div>
 <p class="font-label-caps text-label-caps text-on-surface-variant mb-1" id="brideFullname">—</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant" id="brideParents">—</p>
-<a id="brideIG" href="#" target="_blank" class="mt-2 text-primary hover:text-heritage-gold transition-colors"><span class="material-symbols-outlined text-2xl">photo_camera</span></a>
+<a id="brideIG" href="#" target="_blank" class="mt-2 text-primary hover:text-heritage-gold transition-colors"><span class="material-symbols-outlined text-xl">photo_camera</span></a>
 </div>
-<div class="md:col-span-6 flex justify-center order-1 md:order-2 flex-col items-center gap-4">
-<div class="relative w-64 h-80 md:w-80 md:h-[450px] rounded-t-full rounded-b-[40px] overflow-hidden border-4 border-surface-container shadow-2xl p-2 bg-surface">
+<!-- Foto Tengah (Single Image) -->
+<div class="md:col-span-6 flex justify-center order-1 md:order-2">
+<div class="relative w-64 h-80 md:w-80 md:h-[450px] rounded-t-full rounded-b-[40px] overflow-hidden border-4 border-surface-container-highest shadow-xl p-2 bg-surface">
 <div class="w-full h-full rounded-t-full rounded-b-[32px] overflow-hidden">
-<img id="bridePhoto" alt="Portrait of Bride" class="w-full h-full object-cover object-top" src=""/>
-</div>
-</div>
-<div class="font-display-hero text-heritage-gold italic drop-shadow-sm text-6xl">&amp;</div>
-<div class="relative w-64 h-80 md:w-80 md:h-[450px] rounded-t-full rounded-b-[40px] overflow-hidden border-4 border-surface-container shadow-2xl p-2 bg-surface">
-<div class="w-full h-full rounded-t-full rounded-b-[32px] overflow-hidden">
-<img id="groomPhoto" alt="Portrait of Groom" class="w-full h-full object-cover object-top" src=""/>
+<img id="couplePhoto" alt="Portrait of Bride and Groom" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AP1WRLvaMo0PZ36wjD7CxRctt6Olle4c39SMUBzbphwM26i1PuW6tybebpTp1wxbvOVjj-pBO-0XT0_llQYKj3BQdOWTahcBzFZJxGXrCEc9Pb5IaH3jo8_gj7SwZcUhAWqWZXb9-XAbaQpUhJpsald6UL9GL4-4lSHvJcBX9wfU8am3TNDRXsud7XWIF1xJXmXH8YDDubeql6hlUY1v1XoZ8iJp-Cn0V2RnLolCsvAXtEDEmVOwa7abFkDVPGg"/>
 </div>
 </div>
 </div>
 <div class="md:col-span-3 text-center md:text-left flex flex-col items-center md:items-start gap-stack-sm order-3 md:order-3">
 <h3 class="font-headline-lg-mobile md:font-headline-lg text-primary" id="groomName">—</h3>
-<div class="h-[2px] w-16 bg-heritage-gold my-2"></div>
+<div class="h-[1px] w-12 bg-heritage-gold my-2"></div>
 <p class="font-label-caps text-label-caps text-on-surface-variant mb-1" id="groomFullname">—</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant" id="groomParents">—</p>
-<a id="groomIG" href="#" target="_blank" class="mt-2 text-primary hover:text-heritage-gold transition-colors"><span class="material-symbols-outlined text-2xl">photo_camera</span></a>
+<a id="groomIG" href="#" target="_blank" class="mt-2 text-primary hover:text-heritage-gold transition-colors"><span class="material-symbols-outlined text-xl">photo_camera</span></a>
 </div>
 </div>
 </div>
 </section>
-<!-- Event Section -->
+
+<!-- Detail Acara Section -->
 <section class="cream-space mb-section-gap-mobile md:mb-section-gap-desktop reveal" id="event">
 <div class="text-center mb-stack-lg">
 <h2 class="font-headline-lg-mobile md:font-headline-lg text-primary mb-2">Detail Acara</h2>
@@ -303,40 +290,50 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
 <!-- Akad Nikah Card -->
-<div class="glass-card rounded-2xl p-stack-lg flex flex-col items-center text-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 shadow-lg border-b-4 border-b-primary-fixed">
-<span class="material-symbols-outlined text-5xl text-heritage-gold mb-4 drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div class="glass-card rounded-xl p-stack-lg flex flex-col items-center text-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-heritage-gold mb-4" style="font-variation-settings: 'FILL' 1;">favorite</span>
 <h3 class="font-section-title text-section-title text-primary mb-2">Akad Nikah</h3>
-<p class="font-label-caps text-label-caps text-primary-fixed-dim bg-primary text-white px-4 py-1.5 rounded-full mb-4 shadow-sm" id="akadTime">—</p>
+<p class="font-label-caps text-label-caps text-primary mb-4 bg-primary/10 px-4 py-1.5 rounded-full" id="akadTime">—</p>
 <p class="font-body-md font-semibold text-on-background mb-1" id="venueAddressAkad">—</p>
+<a class="mt-6 inline-flex items-center gap-2 px-6 py-2 bg-primary text-on-primary rounded-full hover:bg-surface-tint transition-colors text-sm" href="#" target="_blank">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        Google Maps
+                    </a>
 </div>
 <!-- Resepsi Card -->
-<div class="glass-card rounded-2xl p-stack-lg flex flex-col items-center text-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 shadow-lg border-b-4 border-b-heritage-gold">
-<span class="material-symbols-outlined text-5xl text-heritage-gold mb-4 drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">celebration</span>
+<div class="glass-card rounded-xl p-stack-lg flex flex-col items-center text-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-heritage-gold mb-4" style="font-variation-settings: 'FILL' 1;">celebration</span>
 <h3 class="font-section-title text-section-title text-primary mb-2">Resepsi</h3>
-<p class="font-label-caps text-label-caps text-primary-fixed-dim bg-primary text-white px-4 py-1.5 rounded-full mb-4 shadow-sm" id="resepsiTime">—</p>
+<p class="font-label-caps text-label-caps text-primary mb-4 bg-primary/10 px-4 py-1.5 rounded-full" id="resepsiTime">—</p>
 <p class="font-body-md font-semibold text-on-background mb-1" id="venueAddress">—</p>
+<a class="mt-6 inline-flex items-center gap-2 px-6 py-2 bg-primary text-on-primary rounded-full hover:bg-surface-tint transition-colors text-sm" href="#" target="_blank">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        Google Maps
+                    </a>
 </div>
 </div>
+<!-- Map Iframe disisipkan kembali -->
 <div class="mt-8 text-center">
-    <iframe class="w-full h-64 rounded-2xl border-4 border-surface-container shadow-xl" id="mapFrame" loading="lazy" src=""></iframe>
+    <iframe class="w-full h-64 rounded-xl border border-primary/20 shadow-lg" id="mapFrame" loading="lazy" src=""></iframe>
 </div>
 </section>
+
 <!-- RSVP Section -->
 <section class="cream-space mb-section-gap-mobile md:mb-section-gap-desktop reveal" id="rsvp">
 <div class="text-center mb-stack-lg">
 <h2 class="font-headline-lg-mobile md:font-headline-lg text-primary mb-2">RSVP</h2>
 <p class="font-body-md text-on-surface-variant">Please kindly help us prepare everything better by confirming your attendance.</p>
 </div>
-<div class="glass-card rounded-2xl p-stack-lg max-w-2xl mx-auto mb-section-gap-mobile shadow-lg">
+<div class="glass-card rounded-xl p-stack-lg max-w-2xl mx-auto">
 <form id="rsvpForm" onsubmit="submitRsvp(event)" class="flex flex-col gap-stack-md">
 <div>
 <label class="sr-only" for="rsvpName">Nama</label>
-<input class="w-full bg-transparent border-0 border-b-2 border-primary/30 focus:ring-0 focus:border-heritage-gold text-on-background placeholder-on-surface-variant px-2 py-3 font-body-md transition-colors" id="rsvpName" placeholder="Nama Lengkap" required="" type="text"/>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-background placeholder-on-surface-variant px-0 py-2 font-body-md transition-colors" id="rsvpName" placeholder="Nama Lengkap" required="" type="text"/>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md mt-2">
 <div>
 <label class="sr-only" for="rsvpStatus">Konfirmasi Kehadiran</label>
-<select class="w-full bg-transparent border-0 border-b-2 border-primary/30 focus:ring-0 focus:border-heritage-gold text-on-background px-2 py-3 font-body-md transition-colors appearance-none" id="rsvpStatus" required>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-background px-0 py-2 font-body-md transition-colors appearance-none" id="rsvpStatus" required>
 <option class="text-on-surface-variant" disabled="" selected="" value="">Konfirmasi Kehadiran</option>
 <option value="Hadir">Hadir</option>
 <option value="Tidak Hadir">Tidak Hadir</option>
@@ -344,62 +341,69 @@
 </div>
 <div>
 <label class="sr-only" for="rsvpGuests">Jumlah Tamu</label>
-<input class="w-full bg-transparent border-0 border-b-2 border-primary/30 focus:ring-0 focus:border-heritage-gold text-on-background placeholder-on-surface-variant px-2 py-3 font-body-md transition-colors" id="rsvpGuests" placeholder="Jumlah Tamu" min="1" required="" type="number"/>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-background placeholder-on-surface-variant px-0 py-2 font-body-md transition-colors" id="rsvpGuests" placeholder="Jumlah Tamu" min="1" required="" type="number"/>
 </div>
 </div>
+<!-- Ditambahkan form Ucapan agar sistem tidak error -->
 <div>
 <label class="sr-only" for="rsvpMsg">Ucapan &amp; Doa</label>
-<textarea class="w-full bg-transparent border-0 border-b-2 border-primary/30 focus:ring-0 focus:border-heritage-gold text-on-background placeholder-on-surface-variant px-2 py-3 font-body-md transition-colors resize-none" id="rsvpMsg" rows="3" placeholder="Tulis ucapan dan doa untuk kedua mempelai..."></textarea>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-background placeholder-on-surface-variant px-0 py-2 font-body-md transition-colors resize-none mt-2" id="rsvpMsg" rows="2" placeholder="Tulis ucapan dan doa untuk kedua mempelai..."></textarea>
 </div>
 <div class="mt-6 text-center">
-<button class="inline-block px-10 py-4 bg-primary text-white rounded-full hover:bg-primary-fixed hover:text-deep-forest hover:scale-105 transition-all duration-300 font-label-caps text-label-caps tracking-wider shadow-md" type="submit">
+<button class="inline-block px-10 py-3 bg-primary text-on-primary rounded-full hover:bg-surface-tint hover:scale-105 transition-all duration-300 font-label-caps text-label-caps tracking-wider" type="submit">
                             KIRIM RSVP
                         </button>
 </div>
 <div class="rsvp-msg font-medium mt-4" id="rsvpConfirm">Terima kasih, RSVP Anda telah terkirim 🤍</div>
 </form>
 </div>
-<!-- Wedding Gift -->
-<div class="text-center mb-stack-lg mt-stack-lg">
+</section>
+
+<!-- Wedding Gift Section -->
+<section class="cream-space mb-section-gap-mobile md:mb-section-gap-desktop reveal">
+<div class="text-center mb-stack-lg">
 <h2 class="font-headline-lg-mobile md:font-headline-lg text-primary mb-2">Wedding Gift</h2>
 <p class="font-body-md text-on-surface-variant">For family and friends who would like to send a gift. We would be glad to receive it.</p>
 </div>
-<div class="glass-card rounded-2xl p-stack-lg max-w-md mx-auto text-center border-t-8 border-t-heritage-gold shadow-xl">
-<span class="font-label-caps text-label-caps text-primary-fixed-dim bg-primary text-white px-5 py-1.5 rounded-full mb-4 inline-block shadow-sm" id="bankName">—</span>
-<p class="font-headline-lg-mobile text-primary mt-3" id="bankAcc">—</p>
+<div class="glass-card rounded-xl p-stack-lg max-w-md mx-auto text-center border-t-4 border-t-heritage-gold">
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container px-4 py-1.5 rounded-full mb-4 inline-block" id="bankName">—</span>
+<p class="font-headline-lg-mobile text-primary mt-2" id="bankAcc">—</p>
 <p class="font-body-md text-on-surface mt-1 mb-6 font-medium" id="bankAccName">—</p>
-<button class="inline-flex items-center gap-2 px-6 py-2.5 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors text-sm font-semibold" onclick="copyAccountNumber()">
+<button class="inline-flex items-center gap-2 px-6 py-2 border border-primary text-primary rounded-full hover:bg-primary/5 transition-colors text-sm" onclick="copyAccountNumber()">
 <span class="material-symbols-outlined text-sm">content_copy</span>
                     Salin Rekening
                 </button>
 </div>
 </section>
 </main>
+
 <!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden bg-surface-container border-t border-outline-variant shadow-[0_-4px_20px_rgba(0,0,0,0.05)] docked full-width bottom-0 fixed rounded-t-2xl z-50 flex justify-around items-center px-4 py-3 transition-all duration-300 ease-in-out w-full">
-<a class="flex flex-col items-center justify-center text-primary hover:text-heritage-gold p-2 rounded-lg transition-colors" href="#cover-section" onclick="window.scrollTo(0,0)">
+<nav class="md:hidden bg-surface-container border-t border-outline-variant shadow-lg docked full-width bottom-0 fixed rounded-t-xl z-50 flex justify-around items-center px-4 py-3 transition-all duration-300 ease-in-out">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 p-2 rounded-lg transition-colors" href="#cover-section" onclick="window.scrollTo(0,0)">
 <span class="material-symbols-outlined">home</span>
 <span class="font-label-caps text-label-caps mt-1">Home</span>
 </a>
-<a class="flex flex-col items-center justify-center text-primary hover:text-heritage-gold p-2 rounded-lg transition-colors" href="#couple">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 p-2 rounded-lg transition-colors" href="#couple">
 <span class="material-symbols-outlined">favorite</span>
 <span class="font-label-caps text-label-caps mt-1">Couple</span>
 </a>
-<a class="flex flex-col items-center justify-center text-primary hover:text-heritage-gold p-2 rounded-lg transition-colors" href="#event">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 p-2 rounded-lg transition-colors" href="#event">
 <span class="material-symbols-outlined">event</span>
 <span class="font-label-caps text-label-caps mt-1">Event</span>
 </a>
-<a class="flex flex-col items-center justify-center text-primary hover:text-heritage-gold p-2 rounded-lg transition-colors" href="#rsvp">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 p-2 rounded-lg transition-colors" href="#rsvp">
 <span class="material-symbols-outlined">mail</span>
 <span class="font-label-caps text-label-caps mt-1">RSVP</span>
 </a>
 </nav>
+
 <!-- Footer -->
-<footer class="flex flex-col items-center gap-stack-md text-center w-full px-gutter py-14 border-t border-primary/20 bg-primary mt-auto relative z-10 pb-28 md:pb-14">
-<h2 class="font-section-title text-section-title text-heritage-gold text-3xl" id="footerNames">— &amp; —</h2>
-<p class="font-body-sm text-body-sm text-surface-container mt-4 max-w-sm">Merupakan suatu kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu kepada kami.</p>
+<footer class="flex flex-col items-center gap-stack-md text-center w-full px-gutter py-12 border-t border-outline-variant bg-surface-container-lowest mt-auto relative z-10 pb-24 md:pb-12">
+<h2 class="font-section-title text-section-title text-heritage-gold" id="footerNames">— &amp; —</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-4 max-w-sm">Merupakan suatu kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu kepada kami.</p>
 </footer>
 
+<!-- SISTEM: Script Integrasi Google Sheet Lama -->
 <script>
   // ============================================================
   // URL Web App Google Apps Script Anda (SUDAH DIISI)
@@ -432,6 +436,7 @@
     const coupleNames = `${c.bride_name || '—'}<br><span class="text-heritage-gold italic">&amp;</span><br>${c.groom_name || '—'}`;
     document.getElementById('coverNames').innerHTML = coupleNames;
     document.getElementById('footerNames').textContent = `${c.bride_name || '—'} & ${c.groom_name || '—'}`;
+    document.getElementById('headerNames').textContent = `${c.bride_name || '—'} & ${c.groom_name || '—'}`;
     document.title = `Undangan Pernikahan ${c.bride_name || '—'} & ${c.groom_name || '—'}`;
 
     document.getElementById('guestNameCover').textContent = guestName;
@@ -443,8 +448,7 @@
     }
 
     const dateObj = new Date(c.wedding_datetime);
-    const dateShort = dateObj.toLocaleDateString('id-ID', {day:'2-digit', month:'2-digit', year:'numeric'});
-    document.getElementById('coverDate').textContent = dateObj.toLocaleDateString('id-ID', {day:'numeric', month:'short', year:'2-digit'}).replace(/ /g, ' . ');
+    document.getElementById('coverDate').textContent = dateObj.toLocaleDateString('id-ID', {day:'numeric', month:'numeric', year:'2-digit'}).replace(/\//g, ' . ');
     
     document.getElementById('eventDateFull').textContent = `Insya Allah Akan dilaksanakan pada: ${dateObj.toLocaleDateString('id-ID', {weekday:'long', day:'numeric', month:'long', year:'numeric'})}`;
     document.getElementById('akadTime').textContent = c.akad_time || '—';
@@ -453,13 +457,14 @@
     document.getElementById('venueAddressAkad').textContent = c.venue_address || '—';
     document.getElementById('mapFrame').src = `https://maps.google.com/maps?q=${c.map_lat},${c.map_lng}&t=m&z=15&output=embed`;
 
-    document.getElementById('bridePhoto').src = c.bride_photo || '';
+    // Mengisi Foto Mempelai Tengah (Menggunakan foto wanita jika foto khusus couple belum tersedia)
+    document.getElementById('couplePhoto').src = c.bride_photo || 'https://lh3.googleusercontent.com/aida/AP1WRLvaMo0PZ36wjD7CxRctt6Olle4c39SMUBzbphwM26i1PuW6tybebpTp1wxbvOVjj-pBO-0XT0_llQYKj3BQdOWTahcBzFZJxGXrCEc9Pb5IaH3jo8_gj7SwZcUhAWqWZXb9-XAbaQpUhJpsald6UL9GL4-4lSHvJcBX9wfU8am3TNDRXsud7XWIF1xJXmXH8YDDubeql6hlUY1v1XoZ8iJp-Cn0V2RnLolCsvAXtEDEmVOwa7abFkDVPGg';
+
     document.getElementById('brideName').textContent = c.bride_name || '—';
     document.getElementById('brideFullname').textContent = c.bride_fullname || '';
     document.getElementById('brideParents').textContent = c.bride_parents || '';
     document.getElementById('brideIG').href = c.bride_instagram || '#';
 
-    document.getElementById('groomPhoto').src = c.groom_photo || '';
     document.getElementById('groomName').textContent = c.groom_name || '—';
     document.getElementById('groomFullname').textContent = c.groom_fullname || '';
     document.getElementById('groomParents').textContent = c.groom_parents || '';
@@ -470,7 +475,6 @@
     document.getElementById('bankAccName').textContent = c.bank_account_name ? `a.n ${c.bank_account_name}` : '';
 
     document.getElementById('loadingScreen').style.display = 'none';
-    document.getElementById('cover-section').style.visibility = 'visible';
     
     setTimeout(reveal, 100);
   }
