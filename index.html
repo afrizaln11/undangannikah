@@ -101,8 +101,8 @@
         .glass-card { background: rgba(252, 253, 250, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(118, 152, 38, 0.3); }
         
         .bg-botanical {
-            /* Background Latar Utama */
-            background-image: url('https://drive.google.com/uc?id=1JiBceIihpt6zOm5Jeeh4zEjB3O5uHJ7H');
+            /* Memanggil gambar dari folder Github Anda */
+            background-image: url('bg-alam.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -130,7 +130,8 @@
             height: 100%;
             overflow: hidden;
             transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease-in-out;
-            background-color: theme("colors.surface-container");
+            /* DITAMBAHKAN: Warna putih pekat agar tulisan belakang tidak bocor jika gambar gagal dimuat */
+            background-color: #f7f9f2; 
         }
         .gate-half img {
             position: absolute;
@@ -201,13 +202,13 @@
 <!-- Split Cover Section (Gate) -->
 <div id="cover-section" style="visibility:hidden;">
 <div class="gate-half gate-left">
-<!-- Gambar Cover Kiri -->
-<img alt="Nature background left" src="https://drive.google.com/uc?id=1JiBceIihpt6zOm5Jeeh4zEjB3O5uHJ7H"/>
+<!-- Mengambil gambar dari folder GitHub Anda -->
+<img alt="" src="bg-alam.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20"></div>
 </div>
 <div class="gate-half gate-right">
-<!-- Gambar Cover Kanan -->
-<img alt="Nature background right" src="https://drive.google.com/uc?id=1JiBceIihpt6zOm5Jeeh4zEjB3O5uHJ7H"/>
+<!-- Mengambil gambar dari folder GitHub Anda -->
+<img alt="" src="bg-alam.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20"></div>
 </div>
 <div class="text-center w-full px-gutter" id="cover-content">
