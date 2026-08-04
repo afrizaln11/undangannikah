@@ -90,14 +90,37 @@
   .gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:20px;}
   .gallery img{ width:100%; height:130px; object-fit:cover; }
 
-  #rsvpForm{ display:flex; flex-direction:column; gap:16px; margin-top:30px; }
-  #rsvpForm input, #rsvpForm select, #rsvpForm textarea{
-    background:transparent; border:none; border-bottom:1px solid var(--line);
-    padding:10px 2px; font-family:'Jost',sans-serif; font-size:.92rem; color:var(--ink); outline:none;
+  #rsvpForm{ display:flex; flex-direction:column; gap:26px; margin-top:34px; }
+  .field{ position:relative; }
+  #rsvpForm label{
+    display:block; font-size:.66rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--sage); margin-bottom:8px;
   }
-  #rsvpForm label{ font-size:.68rem; letter-spacing:.15em; text-transform:uppercase; color:var(--sage); }
-  #rsvpForm button{ margin-top:10px; background:var(--sage-dark); color:var(--ivory); border:none; padding:14px; letter-spacing:.2em; font-size:.75rem; text-transform:uppercase; cursor:pointer; }
-  .rsvp-msg{ font-size:.82rem; margin-top:14px; color:var(--sage-dark); display:none;}
+  #rsvpForm input, #rsvpForm select, #rsvpForm textarea{
+    display:block; width:100%; box-sizing:border-box;
+    background:transparent; border:none; border-bottom:1px solid var(--line);
+    padding:8px 2px 10px; font-family:'Jost',sans-serif; font-size:1rem; color:var(--ink);
+    outline:none; border-radius:0; transition:border-color .3s ease;
+  }
+  #rsvpForm input::placeholder, #rsvpForm textarea::placeholder{ color:#b8b3a3; }
+  #rsvpForm input:focus, #rsvpForm select:focus, #rsvpForm textarea:focus{
+    border-bottom-color: var(--gold);
+  }
+  #rsvpForm select{
+    appearance:none; -webkit-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%234A5D48'><path d='M5 7l5 5 5-5z'/></svg>");
+    background-repeat:no-repeat; background-position:right 2px center; background-size:16px;
+    padding-right:24px; cursor:pointer;
+  }
+  #rsvpForm textarea{ resize:vertical; min-height:64px; font-family:'Jost',sans-serif; line-height:1.6; }
+  #rsvpForm button{
+    margin-top:6px; background:var(--sage-dark); color:var(--ivory); border:none;
+    padding:16px; letter-spacing:.22em; font-size:.75rem; text-transform:uppercase; cursor:pointer;
+    transition:background .3s ease;
+  }
+  #rsvpForm button:hover{ background:var(--sage); }
+  #rsvpForm button:disabled{ opacity:.55; cursor:not-allowed; }
+  .rsvp-msg{ font-size:.85rem; margin-top:16px; color:var(--sage-dark); text-align:center; display:none;}
 
   footer{ text-align:center; padding:60px 24px; font-size:.75rem; color:#8a8674; }
   footer .script{ font-size:1.6rem; color:var(--sage-dark); display:block; margin-bottom:10px;}
@@ -215,24 +238,24 @@
   <p class="center" style="font-size:.88rem; color:#5c5848;">Mohon konfirmasi kehadiran Anda</p>
 
   <form id="rsvpForm" onsubmit="submitRsvp(event)">
-    <div>
+    <div class="field">
       <label>Nama</label>
-      <input type="text" id="rsvpName" required>
+      <input type="text" id="rsvpName" placeholder="Nama Anda" required>
     </div>
-    <div>
+    <div class="field">
       <label>Jumlah Tamu</label>
       <input type="number" id="rsvpGuests" min="1" value="1" required>
     </div>
-    <div>
+    <div class="field">
       <label>Konfirmasi Kehadiran</label>
       <select id="rsvpStatus" required>
         <option value="Hadir">Ya, Saya Hadir</option>
         <option value="Tidak Hadir">Maaf, Saya Tidak Hadir</option>
       </select>
     </div>
-    <div>
+    <div class="field">
       <label>Ucapan &amp; Doa</label>
-      <textarea id="rsvpMsg" rows="3"></textarea>
+      <textarea id="rsvpMsg" rows="3" placeholder="Tulis ucapan dan doa untuk kedua mempelai..."></textarea>
     </div>
     <button type="submit">Kirim RSVP</button>
     <div class="rsvp-msg" id="rsvpConfirm">Terima kasih, RSVP Anda telah terkirim 🤍</div>
