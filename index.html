@@ -101,9 +101,9 @@
         .cream-space { margin-left: auto; margin-right: auto; max-width: 800px; padding-left: 24px; padding-right: 24px; }
         .glass-card { background: rgba(252, 253, 250, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(118, 152, 38, 0.3); }
         
+        /* Menggunakan gambar background yang sudah diupload di GitHub */
         .bg-botanical {
-            /* GANTI INI DENGAN LINK GAMBAR ALAM GENERATE ANDA */
-            background-image: url('URL_GAMBAR_NATURE_BARU_ANDA.png');
+            background-image: url('bg-alam.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -207,13 +207,13 @@
 <!-- Split Cover Section (Gate) -->
 <div id="cover-section">
 <div class="gate-half gate-left">
-<!-- GANTI INI DENGAN LINK GAMBAR ALAM GENERATE ANDA -->
-<img alt="Nature background left" src="URL_GAMBAR_NATURE_BARU_ANDA.png"/>
+<!-- Menggunakan gambar lokal untuk pintu kiri -->
+<img alt="Nature background left" src="bg-alam.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20"></div>
 </div>
 <div class="gate-half gate-right">
-<!-- GANTI INI DENGAN LINK GAMBAR ALAM GENERATE ANDA -->
-<img alt="Nature background right" src="URL_GAMBAR_NATURE_BARU_ANDA.png"/>
+<!-- Menggunakan gambar lokal untuk pintu kanan -->
+<img alt="Nature background right" src="bg-alam.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20"></div>
 </div>
 <div class="text-center w-full px-gutter" id="cover-content">
@@ -285,7 +285,8 @@
 <div class="font-display-hero text-heritage-gold italic drop-shadow-sm text-6xl">&amp;</div>
 <div class="relative w-64 h-80 md:w-80 md:h-[450px] rounded-t-full rounded-b-[40px] overflow-hidden border-4 border-surface-container shadow-2xl p-2 bg-surface">
 <div class="w-full h-full rounded-t-full rounded-b-[32px] overflow-hidden">
-<img id="groomPhoto" alt="Portrait of Groom" class="w-full h-full object-cover object-top" src=""/>
+<!-- Memuat langsung dari file lokal rizall.png untuk Groom -->
+<img id="groomPhoto" alt="Portrait of Groom" class="w-full h-full object-cover object-top" src="rizall.png"/>
 </div>
 </div>
 </div>
@@ -388,7 +389,7 @@
 </div>
 </section>
 </main>
-<!-- BottomNavBar (Mobile Only) ditambahkan left-0 agar full width -->
+<!-- BottomNavBar (Mobile Only) -->
 <nav class="md:hidden bg-surface-container border-t border-outline-variant shadow-[0_-4px_20px_rgba(0,0,0,0.05)] docked full-width bottom-0 left-0 fixed rounded-t-2xl z-50 flex justify-around items-center px-4 py-3 transition-all duration-300 ease-in-out w-full">
 <a class="flex flex-col items-center justify-center text-primary hover:text-heritage-gold p-2 rounded-lg transition-colors" href="#cover-section" onclick="window.scrollTo(0,0)">
 <span class="material-symbols-outlined">home</span>
@@ -434,7 +435,6 @@
     try{
       const res = await fetch(API_URL);
       const data = await res.json();
-      // Mengirim data rsvp ke fungsi renderContent
       renderContent(data.content, data.gallery, data.rsvp);
     }catch(err){
       document.getElementById('loadingScreen').textContent = 'Gagal memuat data undangan. Cek koneksi / API_URL.';
@@ -466,13 +466,18 @@
     document.getElementById('venueAddressAkad').textContent = c.venue_address || '—';
     document.getElementById('mapFrame').src = `https://maps.google.com/maps?q=${c.map_lat},${c.map_lng}&t=m&z=15&output=embed`;
 
+    // Ambil foto pengantin dari API jika ada, jika tidak biarkan kosong
     document.getElementById('bridePhoto').src = c.bride_photo || '';
+    
+    // Foto pengantin pria sudah di-hardcode ke 'rizall.png' di HTML atas, namun jika di Sheet ada link, akan tertimpa. 
+    // Kita panggil lokalnya saja dengan mengutamakan file lokal jika dari sheet kosong:
+    document.getElementById('groomPhoto').src = c.groom_photo || 'rizall.png';
+
     document.getElementById('brideName').textContent = c.bride_name || '—';
     document.getElementById('brideFullname').textContent = c.bride_fullname || '';
     document.getElementById('brideParents').textContent = c.bride_parents || '';
     document.getElementById('brideIG').href = c.bride_instagram || '#';
 
-    document.getElementById('groomPhoto').src = c.groom_photo || '';
     document.getElementById('groomName').textContent = c.groom_name || '—';
     document.getElementById('groomFullname').textContent = c.groom_fullname || '';
     document.getElementById('groomParents').textContent = c.groom_parents || '';
